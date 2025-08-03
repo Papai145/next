@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+:root {
+	--c-primary: #1473E6;
+	--c-black: #2C2C2C;
+	--c-black-20: #6E6E6E;
+	--c-black-for-icon: #303030;
+	--c-black-30: #4B4B4B;
+	--c-border: #F5F5F5;
+	--c-white: #F5F5F5
+}
+
+body {
+	font-family: 'Open Sans', sans-serif;
+}
+
+.title {
+	font-weight: 700;
+}
+
+.text {
+	font-weight: 400;
+}
+
+.h1,
+.h2,
+.h3 {
+	font-weight: 700;
+
+}

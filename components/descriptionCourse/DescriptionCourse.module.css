@@ -1,0 +1,38 @@
+.description_courses {
+	align-items: center;
+	color: var(--c-black-20);
+	display: flex;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 12px;
+	font-weight: 400;
+
+}
+
+.description_courses>:first-child {
+	color: var(--c-black-30);
+	margin-right: 6px;
+
+}
+
+/* .description_courses>:first-child::after {
+	content: '.';
+	height: 14px;
+	line-height: 1;
+	margin-left: 6px;
+	margin-right: 4px;
+	opacity: 1;
+	width: 4px;
+	align-self: center;
+	line-height: 1;
+} */
+
+
+.description_courses>*:nth-child(2) {
+	height: 16px;
+	width: 83px;
+}
+
+.description_courses>*:nth-child(3) {
+	height: 16px;
+	width: 55px;
+}

@@ -1,0 +1,18 @@
+.likes {
+	align-items: center;
+	display: inline-flex;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 12px;
+	font-weight: 400;
+	height: 20px;
+	justify-content: flex-end;
+	letter-spacing: 0%;
+	line-height: 100%;
+	vertical-align: middle;
+	width: 88px;
+}
+
+.likes button {
+	background: none;
+	border: none;
+}

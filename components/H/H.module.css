@@ -1,0 +1,21 @@
+.l {
+	font-size: 34px;
+	letter-spacing: 0%;
+	line-height: 100%;
+	vertical-align: middle;
+}
+
+.m {
+	font-size: 28px;
+	letter-spacing: 0%;
+	line-height: 100%;
+	vertical-align: middle;
+}
+
+.s {
+	font-size: 18px;
+	letter-spacing: 0%;
+	line-height: 100%;
+	margin: 0;
+	vertical-align: middle;
+}
