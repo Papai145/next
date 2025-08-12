@@ -1,0 +1,35 @@
+{
+  "name": "homework",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "stylelint": "stylelint \"app/**/*.css\" --fix"
+  },
+  "dependencies": {
+    "classnames": "^2.5.1",
+    "next": "15.4.5",
+    "react": "19.1.0",
+    "react-dom": "19.1.0"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3.3.1",
+    "@svgr/webpack": "^8.1.0",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "@typescript-eslint/eslint-plugin": "^8.38.0",
+    "@typescript-eslint/parser": "^8.38.0",
+    "eslint": "^9.32.0",
+    "eslint-config-next": "15.4.5",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "stylelint": "^16.23.0",
+    "stylelint-config-recess-order": "^7.1.0",
+    "stylelint-config-standard": "^39.0.0",
+    "stylelint-order": "^7.0.0",
+    "typescript": "^5"
+  }
+}
