@@ -6,18 +6,22 @@ import { JSX } from "react";
 import cart from './logo.png';
 import style from './page.module.css';
 
+const demoData = [
+  {logo:cart,typeCourses:'Front-end',dateAdd :'1 Month Ago',countLike:4,minutes:'3'},
+  {logo:cart,typeCourses:'Front-end',dateAdd :'1 Month Ago',countLike:4,minutes:'3'},
+  {logo:cart,typeCourses:'Front-end',dateAdd :'1 Month Ago',countLike:4,minutes:'3'},
+  {logo:cart,typeCourses:'Front-end',dateAdd :'1 Month Ago',countLike:4,minutes:'3'},
+  {logo:cart,typeCourses:'Front-end',dateAdd :'1 Month Ago',countLike:4,minutes:'3'},
+]
 
 export default function Home():JSX.Element {
   return (
     <div className={style.cards}>
-      <Card logo={cart} typeCourses="Front-end" dateAdd="1 Month Ago" countLike={4} minutes="3"></Card>
-      <Card logo={cart} typeCourses="Front-end" dateAdd="1 Month Ago" countLike={4} minutes="3"></Card>
-      <Card logo={cart} typeCourses="Front-end" dateAdd="1 Month Ago" countLike={4} minutes="3"></Card>
-      <Card logo={cart} typeCourses="Front-end" dateAdd="1 Month Ago" countLike={4} minutes="3"></Card>
-      <Card logo={cart} typeCourses="Front-end" dateAdd="1 Month Ago" countLike={4} minutes="3"></Card>
-      <Card logo={cart} typeCourses="Front-end" dateAdd="1 Month Ago" countLike={4} minutes="3"></Card>
-      <Card logo={cart} typeCourses="Front-end" dateAdd="1 Month Ago" countLike={4} minutes="3"></Card>
+        {demoData.map((el,index)=>{
+      return <Card key={`${index}-${el.dateAdd}`} logo={el.logo} typeCourses={el.typeCourses} dateAdd={el.dateAdd} countLike={el.countLike} minutes={el.minutes}></Card>
+     })}
 
+  
     </div>
   );
 }

@@ -21,7 +21,7 @@ export default function RootLayout({
       <body >
         <div className={styles.header}>
           <div>.my_blog</div>
-          <button><HeaderLink/></button>
+          <button className={styles.header__btn}><HeaderLink/></button>
         </div>
         {children}
       </body>

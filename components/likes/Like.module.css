@@ -18,7 +18,6 @@
 .like--small .like_icon {
 	pointer-events: none;
 	z-index: 0;
-
 }
 
 .like--small--active .like_icon {
