@@ -11,7 +11,10 @@ export interface CardProps
     ButtonHTMLAttributes<HTMLButtonElement>,
     HTMLButtonElement
   > {
+  id: string;
   logo: StaticImageData;
+  title: string;
+  body: string;
   typeCourses: string;
   dateAdd: string;
   countLike: number;
