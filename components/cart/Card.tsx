@@ -1,5 +1,6 @@
-import { JSX } from 'react';
-import style from './Card.module.css';
+'use client';
+import { JSX, useState } from 'react';
+import styles from './Card.module.css';
 import cn from 'classnames';
 import { CardProps } from './Card.props';
 import Image from 'next/image';
@@ -11,21 +12,36 @@ import Arrow from './arrow.svg';
 
 
 export const Card = ({logo,typeCourses,dateAdd,countLike,minutes}: CardProps): JSX.Element => {
+  const[like,setLike] = useState<number>(Number(countLike));
+  const handleLike = async(likeFromChild:number):Promise<undefined>=>{
+    try{
 
+      const response = await fetch('https://jsonplaceholder.typicode.com/posts/:id',{
+        method:'PATCH'
+      });
+            
+      if (!response.ok) throw new Error("Ошибка при обновлении лайка");
+      console.log('запрос направлен');
+      
+      setLike(likeFromChild);
+    }catch(error){
+      console.error("Ошибка:", error);
+    }
+  };
 
   return (
-    <div className={style.container}>
+    <div className={styles.card}>
   
-      <Image src = {logo} alt = "logo"  />
-      <div className={style.content}>
+      <Image className={styles.card_images} src = {logo} alt = "logo"  />
+      <div className={styles.card_content}>
         <div>
         <DescriptionCourse typeCourses={typeCourses} dateAdd ={dateAdd} ></DescriptionCourse>
-        <Like size='small'>{countLike}</Like>
+        <Like size='small' likes={like} likeFunction={handleLike}></Like>
         </div>
         <H size='s'>Как работают гриды</H>
-        <div className={style.text_content}>Грид-раскладка (CSS Grid Layout) представляет собой двумерную систему сеток в CSS. Гриды подойдут и для верстки основных областей страницы..</div>
+        <div className={styles.card_text}>Грид-раскладка (CSS Grid Layout) представляет собой двумерную систему сеток в CSS. Гриды подойдут и для верстки основных областей страницы..</div>
       </div>
-      <div className={style.footer_card}>
+      <div className={styles.card_footer}>
         <span>{minutes} минуты</span>
         <a href="">Читать <Arrow/></a>
       </div>

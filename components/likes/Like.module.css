@@ -1,18 +1,45 @@
-.likes {
-	align-items: center;
-	display: inline-flex;
-	font-family: 'Open Sans', sans-serif;
-	font-size: 12px;
-	font-weight: 400;
-	height: 20px;
-	justify-content: flex-end;
-	letter-spacing: 0%;
-	line-height: 100%;
-	vertical-align: middle;
-	width: 88px;
+.like {
+	background: transparent;
+	cursor: pointer;
+	z-index: 1;
 }
 
-.likes button {
-	background: none;
+
+.like--small {
 	border: none;
+}
+
+.like--big {
+	border-radius: 40px;
+	height: 48px;
+	width: 48px;
+}
+
+.like--small .like_icon {
+	pointer-events: none;
+	z-index: 0;
+}
+
+.like--small--active .like_icon {
+	fill: rgb(42 127 231 /40%);
+	stroke: black;
+	stroke-opacity: 0.4;
+	stroke-width: 1px;
+}
+
+.like--big--active {
+	background: #303030;
+
+}
+
+.like_big_active .like_icon {
+	background: #303030;
+	stroke: white;
+	stroke-width: 1px;
+}
+
+
+.like--small .like_count {
+	color: var(--c-black-20);
+	margin-right: 4px;
 }
