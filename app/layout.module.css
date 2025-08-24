@@ -6,11 +6,6 @@
 	width: 1126px;
 }
 
-.header__btn {
-	background-color: white;
-	border: none;
-	cursor: pointer;
-}
 
 
 @media(width <=1164px) {
