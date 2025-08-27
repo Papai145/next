@@ -7,4 +7,5 @@ export interface HProps
   > {
   size: "s" | "m" | "l";
   children: string;
+  className?: string;
 }

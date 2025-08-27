@@ -10,5 +10,4 @@ export interface LikeProps extends HTMLAttributes<HTMLDivElement> {
   likes: number;
   className?: string;
   children?: ReactNode;
-  likeFunction: Function;
 }

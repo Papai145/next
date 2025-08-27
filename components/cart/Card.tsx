@@ -8,7 +8,7 @@ import { H } from '../H/H';
 import Arrow from './arrow.svg';
 import Link from 'next/link';
 import { truncateText } from '@/utils/truncateText';
-import { LikeWithNumber } from '../likeWithNumber/LikeWithNumber';
+import { Like } from '../likes/Like';
 
 
 
@@ -39,7 +39,7 @@ export const Card = ({id,logo,title,body,typeCourses,dateAdd,countLike,minutes}:
       <div className={styles.card_content}>
         <div>
         <DescriptionCourse typeCourses={typeCourses} dateAdd ={dateAdd} showLastBullet={'hide-last'}></DescriptionCourse>
-    <LikeWithNumber likes={countLike}></LikeWithNumber>
+    <Like likes={countLike} size={'small'}></Like>
         </div>
         <H size='s'>{truncatedTitle}</H>
         <div className={styles.card_text}>{truncatedBody}</div>

@@ -10,6 +10,7 @@
 }
 
 .like--big {
+	border: 1px solid #303030;
 	border-radius: 40px;
 	height: 48px;
 	width: 48px;
@@ -29,13 +30,14 @@
 
 .like--big--active {
 	background: #303030;
+	stroke: white;
+	stroke-width: 1px;
+	stroke-width: 2;
 
 }
 
-.like_big_active .like_icon {
-	background: #303030;
+.like--big--active .like_icon {
 	stroke: white;
-	stroke-width: 1px;
 }
 
 
