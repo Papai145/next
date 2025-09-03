@@ -1,5 +1,4 @@
 import { JSX } from "react";
-import Style from './post.module.css';
 import {  getPost } from "@/api/getPost";
 import { H } from "@/components/H/H";
 import { DescriptionCourse } from "@/components/descriptionCourse/DescriptionCourse";
@@ -9,6 +8,7 @@ import cn from 'classnames';
 import { Like } from "@/components/likes/Like";
 import { getComments } from "@/api/getComments";
 import { Comments } from "@/components/comments/Comments";
+import { ReviewForm } from "@/components/ReviewForm/ReviewForm";
 
 const array = Array.from({length: 10}, (_, i) => String(i));
 
@@ -52,8 +52,8 @@ const comments = await getComments(alias);
         return <Comments key={el.id} name={el.name} email={el.email} comment={el.body}></Comments>;
       })
     }
-
   </div>
+  <ReviewForm postId={alias}/>
     </>
   );
 
