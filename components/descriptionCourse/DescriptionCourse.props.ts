@@ -1,6 +1,4 @@
-import { ButtonHTMLAttributes, DetailedHTMLProps, ReactNode } from "react";
-
-type showLastBullet = "show-all" | "hide-last";
+import type { ButtonHTMLAttributes, DetailedHTMLProps } from 'react';
 
 export interface DescriptionCourseProps
   extends DetailedHTMLProps<
@@ -9,7 +7,7 @@ export interface DescriptionCourseProps
   > {
   typeCourses: string;
   dateAdd: string;
-  showLastBullet?: "hide-last";
+  showLastBullet?: 'hide-last';
   duration?: string;
   className?: string;
 }

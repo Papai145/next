@@ -1,4 +1,4 @@
-import { ButtonHTMLAttributes, DetailedHTMLProps } from "react";
+import type { ButtonHTMLAttributes, DetailedHTMLProps } from 'react';
 
 export interface ButtonProps
   extends DetailedHTMLProps<
@@ -6,6 +6,5 @@ export interface ButtonProps
     HTMLButtonElement
   > {
   nameAction: string;
-  // handleFunction: () => void;
   className?: string;
-}
+  }

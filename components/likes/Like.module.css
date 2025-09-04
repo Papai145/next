@@ -4,7 +4,6 @@
 	z-index: 1;
 }
 
-
 .like--small {
 	border: none;
 }
@@ -33,7 +32,6 @@
 	stroke: white;
 	stroke-width: 1px;
 	stroke-width: 2;
-
 }
 
 .like--big--active .like_icon {

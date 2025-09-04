@@ -1,12 +1,9 @@
-import {
-  ButtonHTMLAttributes,
-  DetailedHTMLProps,
+import type {
   HTMLAttributes,
-  ReactNode,
-} from "react";
+  ReactNode } from 'react';
 
 export interface LikeProps extends HTMLAttributes<HTMLDivElement> {
-  size: "small" | "big";
+  size: 'small' | 'big';
   likes: number;
   className?: string;
   children?: ReactNode;

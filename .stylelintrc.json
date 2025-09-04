@@ -7,6 +7,8 @@
     "order/properties-alphabetical-order": true,
     "color-no-invalid-hex": true,
     "selector-class-pattern": null,
-    "media-feature-range-notation": "context"
+    "at-rule-empty-line-before": "always",
+    "no-empty-last-line": true,
+    "block-opening-brace-empty-line-before": "never"
   }
 }

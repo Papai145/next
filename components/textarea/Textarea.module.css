@@ -6,12 +6,10 @@
 
 .textarea:focus {
 	border: 2px solid blue;
-
 }
 
 .error {
 	border: 1px solid red;
-
 }
 
 .textarea.error:focus {

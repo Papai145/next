@@ -1,5 +1,5 @@
-import { DetailedHTMLProps, InputHTMLAttributes } from "react";
-import { FieldError } from "react-hook-form";
+import type { DetailedHTMLProps, InputHTMLAttributes } from 'react';
+import type { FieldError } from 'react-hook-form';
 
 export interface InputProps
   extends DetailedHTMLProps<

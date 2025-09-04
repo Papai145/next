@@ -1,10 +1,10 @@
 import cn from 'classnames';
-import { JSX } from 'react';
-import { ButtonProps } from './Button.props';
+import type { JSX } from 'react';
+import type { ButtonProps } from './Button.props';
 
-export const Button = ({nameAction,className}:ButtonProps):JSX.Element=>{
+export const Button = ({ nameAction, className }: ButtonProps): JSX.Element => {
 
-	return(
+	return (
 		<button className={cn(className)}  >{nameAction}</button>
 	);
 };

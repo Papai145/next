@@ -12,10 +12,6 @@
 	color: var(--c-black-30);
 }
 
-
-
-/* .description_courses>*:not(:last-child)::after {} */
-
 .description_courses>*::after {
 	align-items: center;
 	content: '•';
@@ -27,7 +23,6 @@
 	vertical-align: middle;
 }
 
-/* Модификатор для скрытия последнего bullet */
 .description_courses[data-point="hide-last"]>*:last-child::after {
 	display: none;
 }

@@ -9,8 +9,6 @@
 	width: 1126px;
 }
 
-
-
 @media(width <=1164px) {
 	.header {
 		width: 980px;

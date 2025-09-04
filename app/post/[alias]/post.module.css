@@ -4,36 +4,28 @@
 	margin-top: 10px;
 	place-items: start;
 	width: 643px;
-
 }
 
 .post__title1 {
 	margin-bottom: 13px;
 }
 
-
-
 .post__description {
 	align-items: center;
 	display: flex;
 }
 
-
-
-.description {}
-
 .post__svg {
 	left: -24px;
 	position: relative;
-
 }
 
 .post__content {
 	color: var(--c-black-20);
 	font-size: 18px;
 	line-height: 32px;
-	vertical-align: middle;
 	margin-bottom: 37px;
+	vertical-align: middle;
 }
 
 .post__title2 {
@@ -54,8 +46,6 @@
 	line-height: 100%;
 	vertical-align: middle;
 }
-
-.comments {}
 
 .comments__title {
 	height: 38px;

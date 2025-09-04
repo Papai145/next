@@ -1,18 +1,17 @@
 'use client';
+import type { JSX, PropsWithChildren } from 'react';
+import { createContext } from 'react';
 
-import { JSX, PropsWithChildren,createContext } from "react";
-
-
- interface LinkContextType {
-	link:string;
+interface LinkContextType {
+	link: string;
 }
 
-const LinkContext = createContext<LinkContextType>({link:''});
+const LinkContext = createContext<LinkContextType>({ link: '' });
 
- export function LinkProvider({children}:PropsWithChildren):JSX.Element{
+export function LinkProvider({ children }: PropsWithChildren): JSX.Element {
 	const link = 'https://ru.pinterest.com/pin/726909196108134079/';
 	return (
-		<LinkContext.Provider value={{link}}>
+		<LinkContext.Provider value={{ link }}>
 			{children}
 		</LinkContext.Provider>
 	);
