@@ -1,0 +1,43 @@
+.comment__header {
+	align-items: center;
+	display: flex;
+	gap: 7px;
+	margin-bottom: 7px !important;
+}
+
+.comment__header>:nth-child(2) {
+	color: var(--c-black-20);
+}
+
+.comment__author {
+	color: var(--c-black-30);
+	font-size: 12px;
+	font-weight: 700;
+	letter-spacing: 0%;
+	line-height: 100%;
+	vertical-align: middle;
+}
+
+.comment__separator {
+	color: var(--c-black-20);
+}
+
+.comment_email {
+	color: var(--c-black-20);
+	font-size: 12px;
+	font-weight: 400;
+	letter-spacing: 0%;
+	line-height: 100%;
+	vertical-align: middle;
+}
+
+.comment__content {
+	color: var(--c-black-30);
+	font-size: 16px;
+	font-weight: 400;
+	letter-spacing: 0%;
+	line-height: 28px;
+	margin-bottom: 23px;
+	vertical-align: middle;
+	width: 800px;
+}

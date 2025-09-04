@@ -1,9 +1,9 @@
-import { JSX } from "react";
+import type { JSX } from 'react';
 
-export default function Home():JSX.Element {
+export default function Home(): JSX.Element {
   return (
     <div>
-    Главная страница
+      Главная страница
     </div>
   );
 }

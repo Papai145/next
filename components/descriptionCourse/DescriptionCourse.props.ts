@@ -1,4 +1,4 @@
-import { ButtonHTMLAttributes, DetailedHTMLProps, ReactNode } from "react";
+import type { ButtonHTMLAttributes, DetailedHTMLProps } from 'react';
 
 export interface DescriptionCourseProps
   extends DetailedHTMLProps<
@@ -7,5 +7,7 @@ export interface DescriptionCourseProps
   > {
   typeCourses: string;
   dateAdd: string;
+  showLastBullet?: 'hide-last';
   duration?: string;
+  className?: string;
 }

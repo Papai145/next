@@ -1,5 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
 
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+
+}
+
+ul,
+ol {
+	list-style: none;
+}
+
+input,
+button,
+textarea,
+select {
+	outline: none;
+}
+
 :root {
 	--c-primary: #1473E6;
 	--c-black: #2C2C2C;
@@ -11,7 +32,11 @@
 }
 
 body {
+	display: flex;
+	flex-direction: column;
 	font-family: 'Open Sans', sans-serif;
+	margin: 8px auto 17px;
+	width: 1126px;
 }
 
 .title {

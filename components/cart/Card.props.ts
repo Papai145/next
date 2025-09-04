@@ -1,10 +1,7 @@
-import React, {
+import type {
   ButtonHTMLAttributes,
-  DetailedHTMLProps,
-  ReactNode,
-} from "react";
-import { DescriptionCourseProps } from "../descriptionCourse/DescriptionCourse.props";
-import { StaticImageData } from "next/image";
+  DetailedHTMLProps } from 'react';
+import type { StaticImageData } from 'next/image';
 
 export interface CardProps
   extends DetailedHTMLProps<
