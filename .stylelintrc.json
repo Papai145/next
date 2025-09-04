@@ -6,6 +6,7 @@
   "rules": {
     "order/properties-alphabetical-order": true,
     "color-no-invalid-hex": true,
-    "selector-class-pattern": null
+    "selector-class-pattern": null,
+    "media-feature-range-notation": "context"
   }
 }

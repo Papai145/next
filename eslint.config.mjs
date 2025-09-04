@@ -20,7 +20,7 @@ export default [
     },
     rules: {
       "@typescript-eslint/explicit-module-boundary-types": "warn",
-      "media-feature-range-notation": "context",
+
       semi: ["error"],
       "prefer-template": ["error"],
       "@typescript-eslint/no-empty-interface": [

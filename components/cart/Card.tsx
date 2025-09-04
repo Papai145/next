@@ -1,5 +1,5 @@
 'use client';
-import { JSX, useState } from 'react';
+import { JSX, useMemo, useState } from 'react';
 import styles from './Card.module.css';
 import cn from 'classnames';
 import { CardProps } from './Card.props';
@@ -8,10 +8,12 @@ import { DescriptionCourse } from '../descriptionCourse/DescriptionCourse';
 import { Like } from '../likes/Like';
 import { H } from '../H/H';
 import Arrow from './arrow.svg';
+import Link from 'next/link';
+import { truncateText } from '@/utils/truncateText';
 
 
 
-export const Card = ({logo,typeCourses,dateAdd,countLike,minutes}: CardProps): JSX.Element => {
+export const Card = ({id,logo,title,body,typeCourses,dateAdd,countLike,minutes}: CardProps): JSX.Element => {
   const[like,setLike] = useState<number>(Number(countLike));
   const handleLike = async(likeFromChild:number):Promise<undefined>=>{
     try{
@@ -21,29 +23,34 @@ export const Card = ({logo,typeCourses,dateAdd,countLike,minutes}: CardProps): J
       });
             
       if (!response.ok) throw new Error("Ошибка при обновлении лайка");
-      console.log('запрос направлен');
-      
       setLike(likeFromChild);
     }catch(error){
       console.error("Ошибка:", error);
     }
   };
-
+  const truncatedTitle = useMemo(() => 
+    truncateText(title, 23), [title]);
+  
+  const truncatedBody = useMemo(() => 
+    truncateText(body, 100), [body]);
   return (
     <div className={styles.card}>
   
-      <Image className={styles.card_images} src = {logo} alt = "logo"  />
+      <Image className={styles.card_images} src = {logo} alt = "logo"   priority />
       <div className={styles.card_content}>
         <div>
         <DescriptionCourse typeCourses={typeCourses} dateAdd ={dateAdd} ></DescriptionCourse>
         <Like size='small' likes={like} likeFunction={handleLike}></Like>
         </div>
-        <H size='s'>Как работают гриды</H>
-        <div className={styles.card_text}>Грид-раскладка (CSS Grid Layout) представляет собой двумерную систему сеток в CSS. Гриды подойдут и для верстки основных областей страницы..</div>
+        <H size='s'>{truncatedTitle}</H>
+        <div className={styles.card_text}>{truncatedBody}</div>
       </div>
       <div className={styles.card_footer}>
         <span>{minutes} минуты</span>
-        <a href="">Читать <Arrow/></a>
+        <Link href={`post/${id}`}>
+            Читать <Arrow/>
+        
+        </Link>
       </div>
     </div>
   );

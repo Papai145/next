@@ -3,8 +3,10 @@ import { } from "next/font/google";
 import "./globals.css";
 import { JSX } from "react";
 import './globals.css';
-import HeaderLink from './header_link.svg';
 import styles from './layout.module.css';
+import HeaderLinkSvg from "@/components/headerLinkSvg/headerLink";
+import { LinkProvider } from "@/context/LinkContext";
+
 
   export const metadata: Metadata = {
   title: "Мой проект на Nest",
@@ -19,10 +21,12 @@ export default function RootLayout({
   return (
     <html lang="ru">
       <body >
-        <div className={styles.header}>
+        <LinkProvider>
+             <div className={styles.header}>
           <div>.my_blog</div>
-          <button className={styles.header__btn}><HeaderLink/></button>
+          <HeaderLinkSvg/>
         </div>
+        </LinkProvider>
         {children}
       </body>
     </html>
