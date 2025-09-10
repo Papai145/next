@@ -6,7 +6,6 @@
   width: 1116px;
 }
 
-
 @media(width<=1164px) {
   .cards {
     grid-template-columns: 1fr 1fr;
@@ -16,14 +15,12 @@
   }
 }
 
-
 @media(width<=1000px) {
   .cards {
     gap: 20px;
     width: 700px;
   }
 }
-
 
 @media(width<=750px) {
   .cards {
@@ -32,7 +29,6 @@
     width: 550px;
   }
 }
-
 
 @media(width<=570px) {
   .cards {

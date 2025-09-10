@@ -1,0 +1,21 @@
+.textarea {
+	border: 1px solid #28282829;
+	border-radius: 8px;
+	border-width: 1px;
+}
+
+.textarea:focus {
+	border: 2px solid blue;
+}
+
+.error {
+	border: 1px solid red;
+}
+
+.textarea.error:focus {
+	border: 2px solid red;
+}
+
+.errorMessage {
+	color: red;
+}

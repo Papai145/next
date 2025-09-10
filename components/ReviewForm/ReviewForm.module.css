@@ -1,0 +1,38 @@
+.review {
+	display: grid;
+	gap: 15px;
+	grid-template-columns: [start]229px [secondline] 1fr [end];
+	margin-top: 23px;
+	width: 643px;
+}
+
+.input,
+.textarea {
+	grid-column: start/end;
+	opacity: 1;
+	padding-left: 29px;
+}
+
+.input {
+	height: 58px;
+}
+
+.textarea {
+	height: 106px;
+	margin-bottom: 9px;
+	padding-top: 18px;
+}
+
+.button {
+	background-color: #303030;
+	border-radius: 8px;
+	color: #FFF;
+	cursor: pointer;
+	font-size: 15px;
+	font-weight: 700;
+	grid-column: start/secondline;
+	height: 48px;
+	letter-spacing: 0%;
+	line-height: 140%;
+	text-align: center;
+}
